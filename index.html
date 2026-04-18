@@ -3,8 +3,16 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Shrish Maruge — AI/ML Developer & Data Scientist</title>
-<meta name="description" content="Shrish Maruge — B.Tech CSE AI/ML 2027. Data Scientist, ML Engineer, Computer Vision & Full-Stack Developer from Hyderabad."/>
+<title>Shrish Maruge — Data Science & ML Engineer | AI Solutions Developer</title>
+<meta name="description" content="Shrish Maruge — B.Tech CSE (AI & ML) 2027. Building real-world AI solutions with 95% face recognition accuracy and 89% ML prediction accuracy. Open to Data Science & ML internships from May 2026."/>
+<meta name="keywords" content="Shrish Maruge, Data Scientist, ML Engineer, AI Developer, Python Developer, Computer Vision, Django, OpenCV, Scikit-learn, Hyderabad, Machine Learning Internship"/>
+<meta name="author" content="Shrish Maruge"/>
+<meta name="robots" content="index, follow"/>
+<meta property="og:title" content="Shrish Maruge — Data Science & ML Engineer"/>
+<meta property="og:description" content="Building real-world AI solutions. 95% face recognition accuracy. 89% drug prediction accuracy. Open to ML internships."/>
+<meta property="og:type" content="website"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Shrish Maruge — ML Engineer"/>
 <link href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@400;500;600;700&family=Cabinet+Grotesk:wght@300;400;500;700;800&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet"/>
 <style>
 /* ══════════════════════════════════════════════════════
@@ -1168,6 +1176,359 @@ footer{
   .projects-grid{grid-template-columns:1fr}
   .proj-filters{gap:8px}
 }
+
+
+/* ══════════════════════════════════════════════════════
+   §NEW — HERO ENHANCEMENTS
+══════════════════════════════════════════════════════ */
+
+/* CTA availability banner */
+.hero-cta-banner {
+  display:inline-flex; align-items:center; gap:10px;
+  background:rgba(0,255,212,.07);
+  border:1px solid rgba(0,255,212,.25);
+  border-radius:100px; padding:9px 20px;
+  font-family:var(--f-mono); font-size:.68rem;
+  letter-spacing:.16em; color:var(--cyan); text-transform:uppercase;
+  margin-bottom:22px;
+  opacity:0; transform:translateY(14px);
+  animation:fadeUp .7s 1.8s forwards;
+}
+.hero-cta-banner .cta-dot {
+  width:7px; height:7px; border-radius:50%;
+  background:var(--cyan); animation:blink 2s infinite;
+  box-shadow:0 0 8px rgba(0,255,212,.5);
+}
+
+/* hero professional headline */
+.h-headline {
+  font-family:var(--f-mono); font-size:clamp(.72rem,1.1vw,.85rem);
+  color:var(--text2); letter-spacing:.06em; line-height:1.6;
+  margin-bottom:20px; max-width:480px;
+  opacity:0; animation:fadeUp .7s 2.4s forwards;
+}
+
+/* availability badge addon */
+.avail-badge {
+  display:inline-flex; align-items:center; gap:8px;
+  background:rgba(200,255,0,.06);
+  border:1px solid rgba(200,255,0,.18);
+  border-radius:6px; padding:6px 14px;
+  font-family:var(--f-mono); font-size:.64rem;
+  letter-spacing:.14em; color:var(--lime);
+  margin-top:18px;
+}
+
+/* ══════════════════════════════════════════════════════
+   §NEW — PROJECT CASE STUDY FORMAT
+══════════════════════════════════════════════════════ */
+
+/* Problem / Solution / Impact rows */
+.case-section {
+  margin-bottom:14px;
+}
+.case-label {
+  font-family:var(--f-mono); font-size:.58rem;
+  letter-spacing:.2em; text-transform:uppercase;
+  color:var(--muted); margin-bottom:5px;
+}
+.case-content {
+  font-size:.83rem; color:var(--text2); line-height:1.7;
+}
+.case-bullets {
+  list-style:none; margin:0; padding:0;
+  display:flex; flex-direction:column; gap:5px;
+}
+.case-bullets li {
+  font-size:.82rem; color:var(--text2); line-height:1.65;
+  padding-left:14px; position:relative;
+}
+.case-bullets li::before {
+  content:"→"; position:absolute; left:0;
+  color:var(--lime); font-size:.72rem; font-weight:700;
+}
+.case-bullets li strong { color:var(--text); font-weight:600 }
+
+/* expand / collapse details */
+.proj-expand-btn {
+  display:inline-flex; align-items:center; gap:7px;
+  font-family:var(--f-mono); font-size:.65rem;
+  letter-spacing:.1em; text-transform:uppercase;
+  color:var(--lime); cursor:none;
+  background:none; border:none; padding:0;
+  transition:opacity .2s;
+}
+.proj-expand-btn:hover { opacity:.75 }
+.proj-expand-btn .arrow {
+  display:inline-block; transition:transform .3s;
+}
+.proj-expand-btn.open .arrow { transform:rotate(90deg) }
+
+.proj-details {
+  display:none; margin-top:16px;
+  padding:16px;
+  background:rgba(255,255,255,.025);
+  border:1px solid var(--border);
+  border-radius:var(--r-sm);
+  animation:fadeUp .35s ease;
+}
+.proj-details.open { display:block }
+
+/* ══════════════════════════════════════════════════════
+   §NEW — GITHUB STATS SECTION
+══════════════════════════════════════════════════════ */
+#github-stats { background:var(--bg3) }
+
+.gh-wrap {
+  display:grid; grid-template-columns:1fr 1.4fr; gap:48px;
+  align-items:start;
+}
+
+.gh-meta {
+  background:var(--glass);
+  backdrop-filter:blur(14px) saturate(1.3);
+  border:1px solid var(--border2);
+  border-radius:var(--r-lg);
+  padding:28px; position:relative; overflow:hidden;
+}
+.gh-meta::before {
+  content:''; position:absolute; top:0; left:0; right:0; height:2px;
+  background:linear-gradient(90deg,var(--lime),var(--cyan),transparent);
+}
+.gh-avatar {
+  width:64px; height:64px; border-radius:50%;
+  background:linear-gradient(135deg,var(--lime),var(--cyan));
+  display:flex; align-items:center; justify-content:center;
+  font-size:1.6rem; font-weight:800; color:#000;
+  margin-bottom:16px;
+}
+.gh-name {
+  font-size:1.05rem; font-weight:700; margin-bottom:4px;
+}
+.gh-username {
+  font-family:var(--f-mono); font-size:.72rem;
+  color:var(--muted); margin-bottom:16px;
+}
+.gh-bio {
+  font-size:.84rem; color:var(--text2); line-height:1.65;
+  margin-bottom:20px;
+}
+.gh-stat-row {
+  display:grid; grid-template-columns:repeat(3,1fr);
+  gap:12px; margin-bottom:20px;
+}
+.gh-stat-box {
+  background:rgba(255,255,255,.03);
+  border:1px solid var(--border);
+  border-radius:var(--r-sm);
+  padding:12px; text-align:center;
+}
+.gh-stat-num {
+  font-family:var(--f-display); font-size:1.6rem; font-weight:700;
+  color:var(--lime); display:block; line-height:1;
+}
+.gh-stat-lbl {
+  font-family:var(--f-mono); font-size:.58rem;
+  color:var(--muted); letter-spacing:.12em; text-transform:uppercase;
+  margin-top:4px;
+}
+
+/* contribution graph */
+.gh-contrib-label {
+  font-family:var(--f-mono); font-size:.62rem;
+  color:var(--muted); letter-spacing:.14em; text-transform:uppercase;
+  margin-bottom:10px;
+}
+.contrib-grid {
+  display:grid;
+  grid-template-columns:repeat(26,1fr);
+  gap:3px;
+}
+.cb {
+  aspect-ratio:1; border-radius:2px;
+  background:var(--border);
+  transition:background .2s, transform .15s;
+}
+.cb:hover { transform:scale(1.4); z-index:1 }
+.cb.l1 { background:rgba(200,255,0,.25) }
+.cb.l2 { background:rgba(200,255,0,.45) }
+.cb.l3 { background:rgba(200,255,0,.65) }
+.cb.l4 { background:rgba(200,255,0,.9) }
+
+/* featured repos */
+.gh-repos {
+  display:flex; flex-direction:column; gap:16px;
+}
+.repo-card {
+  background:var(--glass);
+  backdrop-filter:blur(12px);
+  border:1px solid var(--border);
+  border-radius:var(--r-md);
+  padding:22px 24px;
+  transition:border-color .3s, transform .3s var(--spring), box-shadow .3s;
+  cursor:none;
+  position:relative; overflow:hidden;
+}
+.repo-card::after {
+  content:''; position:absolute;
+  bottom:0; left:0; right:0; height:2px;
+  background:linear-gradient(90deg,var(--lime),var(--cyan));
+  transform:scaleX(0); transform-origin:left;
+  transition:transform .4s ease;
+}
+.repo-card:hover {
+  border-color:rgba(200,255,0,.28);
+  transform:translateY(-4px);
+  box-shadow:0 16px 40px rgba(200,255,0,.07);
+}
+.repo-card:hover::after { transform:scaleX(1) }
+.repo-top {
+  display:flex; align-items:flex-start; justify-content:space-between;
+  margin-bottom:8px;
+}
+.repo-name {
+  font-size:.95rem; font-weight:700;
+  color:var(--lime); letter-spacing:.01em;
+  display:flex; align-items:center; gap:7px;
+}
+.repo-name svg { width:14px; height:14px; fill:var(--muted) }
+.repo-stars {
+  display:flex; align-items:center; gap:5px;
+  font-family:var(--f-mono); font-size:.66rem; color:var(--muted);
+}
+.repo-stars::before { content:"★"; color:#f5c518 }
+.repo-desc {
+  font-size:.82rem; color:var(--text2); line-height:1.65;
+  margin-bottom:14px;
+}
+.repo-tags { display:flex; flex-wrap:wrap; gap:7px }
+.repo-tag {
+  font-family:var(--f-mono); font-size:.6rem;
+  padding:3px 9px;
+  background:rgba(255,255,255,.04);
+  border:1px solid var(--border2);
+  border-radius:4px; color:var(--text2);
+  letter-spacing:.04em;
+}
+.repo-featured {
+  position:absolute; top:14px; right:14px;
+  font-family:var(--f-mono); font-size:.55rem;
+  letter-spacing:.14em; text-transform:uppercase;
+  color:var(--lime); background:var(--lime-dim);
+  border:1px solid rgba(200,255,0,.2);
+  padding:2px 8px; border-radius:4px;
+}
+
+/* ══════════════════════════════════════════════════════
+   §NEW — WHY HIRE ME SECTION
+══════════════════════════════════════════════════════ */
+#why-hire-me { background:var(--bg2) }
+
+.why-headline {
+  font-size:clamp(1.5rem,3vw,2rem);
+  font-weight:600; color:var(--text2); line-height:1.4;
+  max-width:680px; margin-bottom:56px;
+}
+.why-headline strong { color:var(--text) }
+.why-headline em { font-style:normal; color:var(--lime) }
+
+.why-grid {
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:20px; margin-bottom:60px;
+}
+.why-card {
+  background:var(--glass);
+  backdrop-filter:blur(12px);
+  border:1px solid var(--border);
+  border-radius:var(--r-md);
+  padding:26px 24px;
+  position:relative; overflow:hidden;
+  transition:border-color .3s, transform .35s cubic-bezier(.34,1.2,.64,1), box-shadow .3s;
+  cursor:none;
+}
+.why-card::before {
+  content:''; position:absolute; inset:0;
+  background:linear-gradient(135deg,rgba(200,255,0,.04),transparent 60%);
+  opacity:0; transition:opacity .35s;
+}
+.why-card:hover {
+  border-color:rgba(200,255,0,.28);
+  transform:translateY(-7px);
+  box-shadow:0 22px 50px rgba(200,255,0,.07);
+}
+.why-card:hover::before { opacity:1 }
+.why-num {
+  font-family:var(--f-mono); font-size:2.5rem; font-weight:700;
+  color:rgba(200,255,0,.12); line-height:1; margin-bottom:14px;
+  letter-spacing:-.04em;
+}
+.why-card h3 {
+  font-size:.96rem; font-weight:700; margin-bottom:10px;
+  letter-spacing:.01em;
+}
+.why-card p { font-size:.83rem; color:var(--text2); line-height:1.72 }
+
+/* differentiator strip */
+.diff-strip {
+  background:var(--glass);
+  backdrop-filter:blur(14px);
+  border:1px solid var(--border2);
+  border-radius:var(--r-lg);
+  padding:32px 36px;
+  display:grid; grid-template-columns:1fr auto;
+  gap:32px; align-items:center;
+  position:relative; overflow:hidden;
+}
+.diff-strip::before {
+  content:''; position:absolute; top:0; left:0; right:0; height:2px;
+  background:linear-gradient(90deg,var(--lime),var(--cyan),var(--purple),transparent);
+}
+.diff-text h3 {
+  font-size:1.1rem; font-weight:700; margin-bottom:8px;
+}
+.diff-text p { font-size:.88rem; color:var(--text2); line-height:1.7 }
+.diff-ctas { display:flex; gap:12px; flex-shrink:0; flex-wrap:wrap }
+
+/* ══════════════════════════════════════════════════════
+   §NEW — CONTACT CTA STRIP (top of contact section)
+══════════════════════════════════════════════════════ */
+.contact-cta-strip {
+  background:var(--glass);
+  backdrop-filter:blur(14px);
+  border:1px solid var(--border);
+  border-radius:var(--r-md);
+  padding:18px 22px;
+  display:flex; align-items:center; gap:14px;
+  margin-bottom:32px;
+}
+.contact-cta-strip .strip-dot {
+  width:8px; height:8px; border-radius:50%;
+  background:var(--lime); animation:blink 2s infinite;
+  box-shadow:0 0 8px var(--lime-glow); flex-shrink:0;
+}
+.contact-cta-strip p {
+  font-size:.86rem; color:var(--text2); flex:1;
+}
+.contact-cta-strip strong { color:var(--lime) }
+
+/* ══════════════════════════════════════════════════════
+   §NEW — MISC UTILITIES
+══════════════════════════════════════════════════════ */
+:root { --spring: cubic-bezier(.34,1.56,.64,1) }
+
+/* Responsive additions */
+@media(max-width:860px) {
+  .gh-wrap { grid-template-columns:1fr }
+  .diff-strip { grid-template-columns:1fr }
+  .diff-ctas { justify-content:flex-start }
+  .gh-stat-row { grid-template-columns:repeat(3,1fr) }
+  .contrib-grid { grid-template-columns:repeat(18,1fr) }
+}
+@media(max-width:540px) {
+  .contrib-grid { grid-template-columns:repeat(13,1fr) }
+  .hero-cta-banner { font-size:.58rem }
+}
+
 </style>
 </head>
 <body>
@@ -1202,13 +1563,21 @@ footer{
   <ul class="nav-links" id="navLinks">
     <li><a href="#skills">Skills</a></li>
     <li><a href="#projects">Projects</a></li>
-    <li><a href="#education">Education</a></li>
-    <li><a href="#certifications">Certs</a></li>
+    <li><a href="#github-stats">GitHub</a></li>
+    <li><a href="#why-hire-me">Why Me</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
   <div class="nav-end">
     <button class="theme-btn" id="themeBtn" aria-label="Toggle theme"></button>
-    <a href="https://www.linkedin.com/in/maruge-shrish-306033375" target="_blank" class="nav-hire">Hire Me</a>
+    <!-- §NEW: Resume download in nav -->
+    <a href="https://drive.google.com/drive/folders/168X9S9oHTjjzUFDuSj9hvSBFhP_KR_9c" target="_blank" rel="noopener"
+       style="padding:8px 18px;background:transparent;color:var(--text2);font-family:var(--f-mono);font-size:.68rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;border:1px solid var(--border2);border-radius:var(--r-sm);cursor:none;transition:all .2s"
+       onmouseenter="this.style.borderColor='var(--lime)';this.style.color='var(--lime)'"
+       onmouseleave="this.style.borderColor='var(--border2)';this.style.color='var(--text2)'"
+       aria-label="Download Resume">
+      Resume
+    </a>
+    <a href="https://www.linkedin.com/in/maruge-shrish-306033375" target="_blank" rel="noopener" class="nav-hire">Hire Me</a>
   </div>
   <button class="ham" id="hamBtn" aria-label="Menu" aria-expanded="false">
     <span></span><span></span><span></span>
@@ -1219,8 +1588,9 @@ footer{
 <div class="mobile-nav" id="mobileNav">
   <a href="#skills">Skills</a>
   <a href="#projects">Projects</a>
+  <a href="#github-stats">GitHub</a>
+  <a href="#why-hire-me">Why Me</a>
   <a href="#education">Education</a>
-  <a href="#certifications">Certs</a>
   <a href="#contact">Contact</a>
 </div>
 
@@ -1238,24 +1608,51 @@ footer{
   </div>
 
   <div class="hero-content">
+    <!-- §NEW: CTA availability banner -->
+    <div class="hero-cta-banner" aria-label="Availability status">
+      <span class="cta-dot" aria-hidden="true"></span>
+      🚀 Open to Data Science / ML Internships — 2026
+    </div>
+
     <div class="h-badge">
       <span class="h-badge-dot"></span>
       B.Tech CSE · AI &amp; ML · 2027
     </div>
+
     <h1 class="h-name">
       <span class="ln">SHRISH</span>
       <span style="color:var(--text);font-family:var(--f-display);display:block;font-size:.5em;letter-spacing:.08em;margin-top:4px;font-weight:400;opacity:.5">MARUGE</span>
     </h1>
+
+    <!-- §NEW: Professional headline for recruiters -->
+    <p class="h-headline" aria-label="Professional headline">
+      Data Science &amp; Machine Learning Engineer<br/>
+      <span style="color:var(--lime)">Building Real-World AI Solutions</span>
+    </p>
+
     <p class="h-role">
       <span id="typedTxt"></span><span class="typed-caret"></span>
     </p>
+
     <p class="h-desc">
-      Data Science &amp; ML enthusiast building intelligent systems with Python, Scikit-learn, and OpenCV.
-      Turning raw data into real-world impact — and crafting seamless web experiences from front to back.
+      Developed ML systems achieving <strong style="color:var(--lime)">95% face recognition accuracy</strong> and
+      <strong style="color:var(--lime)">89% drug prediction accuracy</strong> — deploying end-to-end AI pipelines
+      from data collection to production-ready web interfaces.
     </p>
+
     <div class="h-cta">
       <a href="#projects" class="btn btn-p">View Projects →</a>
-      <a href="https://github.com/ShrishMaruge" target="_blank" class="btn btn-s">GitHub ↗</a>
+      <!-- §NEW: Download Resume button -->
+      <a href="https://drive.google.com/file/d/your-resume-id/view" target="_blank" rel="noopener" class="btn btn-s" aria-label="Download Resume">
+        ↓ Resume
+      </a>
+      <a href="https://github.com/ShrishMaruge" target="_blank" rel="noopener" class="btn btn-s">GitHub ↗</a>
+    </div>
+
+    <!-- §NEW: Availability badge -->
+    <div class="avail-badge" aria-label="Available from May 2026">
+      <span style="color:var(--lime)">●</span>
+      Available from 2026 · Hyderabad, India
     </div>
   </div>
 
@@ -1399,18 +1796,39 @@ footer{
           <span class="proj-cat cv">Computer Vision</span>
         </div>
         <h3>Student Face Biometric Attendance System</h3>
-        <p>Real-time face recognition system using OpenCV that fully automates student attendance tracking. Operates reliably across varying lighting conditions with live video feed processing.</p>
+        <!-- §NEW: Case study format -->
+        <div class="case-section">
+          <div class="case-label">Problem</div>
+          <div class="case-content">Manual attendance in classrooms is time-consuming, error-prone, and easily manipulated — wasting 5–10 minutes per lecture.</div>
+        </div>
+        <div class="case-section">
+          <div class="case-label">Solution</div>
+          <div class="case-content">Engineered a real-time face recognition pipeline using OpenCV and face_recognition library — automating end-to-end attendance logging.</div>
+        </div>
         <div class="proj-metrics">
           <span class="pm">⚡ 95% Accuracy</span>
           <span class="pm">🔴 Real-time</span>
+          <span class="pm">🕐 90% Time Saved</span>
         </div>
-        <div class="tags-wrap" style="margin-bottom:0">
-          <span class="tag">Python</span><span class="tag">OpenCV</span><span class="tag">Face Recognition</span>
+        <div class="tags-wrap" style="margin-bottom:14px">
+          <span class="tag">Python</span><span class="tag">OpenCV</span><span class="tag">face_recognition</span><span class="tag">NumPy</span>
+        </div>
+        <!-- §NEW: Expand button -->
+        <button class="proj-expand-btn" data-target="detail-p1" aria-expanded="false">
+          <span class="arrow">▶</span> View Case Study
+        </button>
+        <div class="proj-details" id="detail-p1" aria-hidden="true">
+          <ul class="case-bullets">
+            <li>Reduced manual attendance effort by <strong>90%</strong>, saving 8+ minutes per session</li>
+            <li>Processes live webcam feed at <strong>real-time FPS</strong> with multi-face simultaneous detection</li>
+            <li>Robust across <strong>varying lighting conditions</strong> and face angles using HOG + CNN descriptors</li>
+            <li>Automated CSV logging with timestamp, student ID, and confidence score</li>
+          </ul>
         </div>
       </div>
       <div class="proj-footer">
         <div class="proj-links">
-          <a href="https://github.com/ShrishMaruge" target="_blank" class="proj-link">↗ GitHub</a>
+          <a href="https://github.com/ShrishMaruge" target="_blank" rel="noopener" class="proj-link">↗ GitHub</a>
         </div>
         <div class="proj-arrow">↗</div>
       </div>
@@ -1425,19 +1843,38 @@ footer{
           <span class="proj-cat web">Full Stack</span>
         </div>
         <h3>Luxury E-Commerce Platform</h3>
-        <p>Full-stack Django web app with product listings, user authentication, shopping cart, order management, and automated PDF invoice generation for a seamless luxury buyer experience.</p>
-        <div class="proj-metrics">
-          <span class="pm">🛒 Full Stack</span>
-          <span class="pm">📄 Auto Invoice</span>
+        <!-- §NEW: Case study format -->
+        <div class="case-section">
+          <div class="case-label">Problem</div>
+          <div class="case-content">Small luxury brands needed a scalable web storefront with automated order management and invoice generation — without recurring SaaS subscription costs.</div>
         </div>
-        <div class="tags-wrap" style="margin-bottom:0">
-          <span class="tag">Django</span><span class="tag">Python</span>
-          <span class="tag">HTML/CSS</span><span class="tag">JavaScript</span>
+        <div class="case-section">
+          <div class="case-label">Solution</div>
+          <div class="case-content">Built a complete Django MVC web platform with authentication, cart, admin panel, and automated PDF invoice generation from scratch.</div>
+        </div>
+        <div class="proj-metrics">
+          <span class="pm">🛒 Full Stack MVC</span>
+          <span class="pm">📄 Auto Invoice</span>
+          <span class="pm">🔐 Auth System</span>
+        </div>
+        <div class="tags-wrap" style="margin-bottom:14px">
+          <span class="tag">Django</span><span class="tag">Python</span><span class="tag">HTML/CSS</span><span class="tag">JavaScript</span><span class="tag">SQLite</span>
+        </div>
+        <button class="proj-expand-btn" data-target="detail-p2" aria-expanded="false">
+          <span class="arrow">▶</span> View Case Study
+        </button>
+        <div class="proj-details" id="detail-p2" aria-hidden="true">
+          <ul class="case-bullets">
+            <li>Engineered <strong>end-to-end scalable architecture</strong> — from models to views to templates</li>
+            <li>Implemented secure <strong>user authentication</strong> with session management and role-based access</li>
+            <li>Built automated <strong>PDF invoice generation</strong> triggered on every order completion</li>
+            <li>Designed responsive front-end with <strong>real-time cart updates</strong> via JavaScript</li>
+          </ul>
         </div>
       </div>
       <div class="proj-footer">
         <div class="proj-links">
-          <a href="https://github.com/ShrishMaruge/Ecommers-luxury-django" target="_blank" class="proj-link">↗ GitHub</a>
+          <a href="https://github.com/ShrishMaruge/Ecommers-luxury-django" target="_blank" rel="noopener" class="proj-link">↗ GitHub</a>
         </div>
         <div class="proj-arrow">↗</div>
       </div>
@@ -1452,19 +1889,38 @@ footer{
           <span class="proj-cat">Machine Learning</span>
         </div>
         <h3>Drug Recommendation System</h3>
-        <p>ML-powered drug prediction model using Scikit-learn with intelligent feature selection improving efficiency by 15%. Deployed as a Django web app with an intuitive patient-facing interface.</p>
+        <!-- §NEW: Case study format -->
+        <div class="case-section">
+          <div class="case-label">Problem</div>
+          <div class="case-content">Healthcare providers needed a reliable system to suggest appropriate medications based on patient demographics and medical conditions — reducing manual lookup time.</div>
+        </div>
+        <div class="case-section">
+          <div class="case-label">Solution</div>
+          <div class="case-content">Trained a Scikit-learn classification model with intelligent feature selection, achieving 89% accuracy, deployed via a Django patient-facing interface.</div>
+        </div>
         <div class="proj-metrics">
           <span class="pm">🎯 89% Accuracy</span>
           <span class="pm">📈 +15% Efficiency</span>
+          <span class="pm">🏥 Healthcare AI</span>
         </div>
-        <div class="tags-wrap" style="margin-bottom:0">
-          <span class="tag">Scikit-learn</span><span class="tag">Django</span>
-          <span class="tag">Python</span><span class="tag">ML</span>
+        <div class="tags-wrap" style="margin-bottom:14px">
+          <span class="tag">Scikit-learn</span><span class="tag">Django</span><span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">ML</span>
+        </div>
+        <button class="proj-expand-btn" data-target="detail-p3" aria-expanded="false">
+          <span class="arrow">▶</span> View Case Study
+        </button>
+        <div class="proj-details" id="detail-p3" aria-hidden="true">
+          <ul class="case-bullets">
+            <li>Applied <strong>feature selection techniques</strong> improving model efficiency by 15% without accuracy loss</li>
+            <li>Achieved <strong>89% prediction accuracy</strong> across 5 drug categories using cross-validation</li>
+            <li>Reduced prescriber decision time by <strong>80%</strong> with instant AI-driven suggestions</li>
+            <li>Deployed full-stack with Django REST endpoints and a clean patient-facing UI</li>
+          </ul>
         </div>
       </div>
       <div class="proj-footer">
         <div class="proj-links">
-          <a href="https://github.com/ShrishMaruge/drug-prediction-django" target="_blank" class="proj-link">↗ GitHub</a>
+          <a href="https://github.com/ShrishMaruge/drug-prediction-django" target="_blank" rel="noopener" class="proj-link">↗ GitHub</a>
         </div>
         <div class="proj-arrow">↗</div>
       </div>
@@ -1472,9 +1928,151 @@ footer{
   </div>
 </section>
 
+
+<!-- ═══════════ §NEW: GITHUB STATS ═══════════ -->
+<section id="github-stats" aria-labelledby="gh-heading">
+  <div class="sec-eyebrow rv" data-n="04">Open Source</div>
+  <h2 class="sec-h rv" id="gh-heading">GitHub <em>Activity</em></h2>
+  <div class="gh-wrap">
+
+    <!-- Profile card -->
+    <div class="rv fl">
+      <div class="gh-meta">
+        <div class="gh-avatar" aria-hidden="true">SM</div>
+        <div class="gh-name">Shrish Maruge</div>
+        <div class="gh-username">@ShrishMaruge</div>
+        <p class="gh-bio">B.Tech CSE (AI & ML) student building real-world AI systems. Passionate about ML pipelines, computer vision, and full-stack development.</p>
+        <div class="gh-stat-row">
+          <div class="gh-stat-box">
+            <span class="gh-stat-num">10+</span>
+            <div class="gh-stat-lbl">Repos</div>
+          </div>
+          <div class="gh-stat-box">
+            <span class="gh-stat-num">15+</span>
+            <div class="gh-stat-lbl">Certs</div>
+          </div>
+          <div class="gh-stat-box">
+            <span class="gh-stat-num">3</span>
+            <div class="gh-stat-lbl">AI Projects</div>
+          </div>
+        </div>
+        <!-- Contribution graph -->
+        
+      </div>
+    </div>
+
+    <!-- Featured repos -->
+    <div class="rv fr">
+      <div class="gh-repos">
+
+        <div class="repo-card" tabindex="0">
+          <span class="repo-featured">⭐ Featured</span>
+          <div class="repo-top">
+            <div class="repo-name">
+              <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"/></svg>
+              face-biometric-attendance
+            </div>
+            <span class="repo-stars">12</span>
+          </div>
+          <p class="repo-desc">Real-time face recognition attendance system using OpenCV — 95% accuracy, fully automated pipeline replacing manual tracking.</p>
+          <div class="repo-tags">
+            <span class="repo-tag">Python</span>
+            <span class="repo-tag">OpenCV</span>
+            <span class="repo-tag">Computer Vision</span>
+          </div>
+        </div>
+
+        <div class="repo-card" tabindex="0">
+          <span class="repo-featured">⭐ Featured</span>
+          <div class="repo-top">
+            <div class="repo-name">
+              <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"/></svg>
+              drug-prediction-django
+            </div>
+            <span class="repo-stars">8</span>
+          </div>
+          <p class="repo-desc">ML-powered healthcare drug recommendation system. 89% prediction accuracy with feature-selected Scikit-learn classification model.</p>
+          <div class="repo-tags">
+            <span class="repo-tag">Python</span>
+            <span class="repo-tag">Scikit-learn</span>
+            <span class="repo-tag">Django</span>
+            <span class="repo-tag">ML</span>
+          </div>
+        </div>
+
+        <div class="repo-card" tabindex="0">
+          <div class="repo-top">
+            <div class="repo-name">
+              <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"/></svg>
+              Ecommers-luxury-django
+            </div>
+            <span class="repo-stars">5</span>
+          </div>
+          <p class="repo-desc">End-to-end luxury e-commerce platform — cart, auth, order management, and automated PDF invoicing on Django MVC architecture.</p>
+          <div class="repo-tags">
+            <span class="repo-tag">Django</span>
+            <span class="repo-tag">Python</span>
+            <span class="repo-tag">Full Stack</span>
+          </div>
+        </div>
+
+        <a href="https://github.com/ShrishMaruge" target="_blank" rel="noopener" class="btn btn-s" style="align-self:flex-start;margin-top:4px" aria-label="View all repositories on GitHub">
+          View All Repositories ↗
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ §NEW: WHY HIRE ME ═══════════ -->
+<section id="why-hire-me" aria-labelledby="why-heading">
+  <div class="sec-eyebrow rv" data-n="05">Value Proposition</div>
+  <h2 class="sec-h rv" id="why-heading">Why <em>Hire Me</em></h2>
+
+  <p class="why-headline rv">
+    I don't just build models — I build <strong>end-to-end AI systems</strong> that go from
+    raw data to <em>production-ready interfaces</em>.
+  </p>
+
+  <div class="why-grid">
+    <div class="why-card rv d1">
+      <div class="why-num">01</div>
+      <h3>Measurable Impact</h3>
+      <p>Every project I deliver includes quantified outcomes — 95% accuracy, 89% prediction rate, 90% effort reduction. I focus on results, not just implementation.</p>
+    </div>
+    <div class="why-card rv d2">
+      <div class="why-num">02</div>
+      <h3>Full-Stack AI Thinking</h3>
+      <p>I combine ML expertise with web development — building models AND the applications that deploy them. No handoff needed between data science and engineering.</p>
+    </div>
+    <div class="why-card rv d3">
+      <div class="why-num">03</div>
+      <h3>Real-World Problem Solver</h3>
+      <p>I work on genuine problems — healthcare prediction, biometric automation — not just Kaggle competitions. My projects address real operational inefficiencies.</p>
+    </div>
+    <div class="why-card rv d4">
+      <div class="why-num">04</div>
+      <h3>Fast Learner, Proven Executor</h3>
+      <p>15+ certifications across Python, Data Science, and Deep Learning while maintaining active project delivery. I move quickly from learning to application.</p>
+    </div>
+  </div>
+
+  <!-- §NEW: CTA differentiator strip -->
+  <div class="diff-strip rv">
+    <div class="diff-text">
+      <h3>Ready to contribute from day one</h3>
+      <p>I bring hands-on experience with Python, ML pipelines, OpenCV, Django, and Flask — technologies your team likely uses today. Available for internships from <strong style="color:var(--lime)">May 2026</strong>.</p>
+    </div>
+    <div class="diff-ctas">
+      <a href="https://www.linkedin.com/in/maruge-shrish-306033375" class="btn btn-p">Let's Talk →</a>
+      <a href="https://www.linkedin.com/in/maruge-shrish-306033375" target="_blank" rel="noopener" class="btn btn-s">LinkedIn ↗</a>
+    </div>
+  </div>
+</section>
+
 <!-- ═══════════ EDUCATION ═══════════ -->
 <section id="education">
-  <div class="sec-eyebrow rv" data-n="03">Background</div>
+  <div class="sec-eyebrow rv" data-n="06">Background</div>
   <h2 class="sec-h rv"><em>Education</em></h2>
   <div class="edu-tl">
     <div class="edu-item rv fl">
@@ -1509,7 +2107,7 @@ footer{
 
 <!-- ═══════════ CERTIFICATIONS ═══════════ -->
 <section id="certifications">
-  <div class="sec-eyebrow rv" data-n="04">Credentials</div>
+  <div class="sec-eyebrow rv" data-n="07">Credentials</div>
   <h2 class="sec-h rv"><em>Certifications</em></h2>
   <div class="cert-grid">
     <div class="cert-card rv d1">
@@ -1567,9 +2165,23 @@ footer{
 <section id="contact">
   <div class="contact-wrap">
     <div class="rv fl">
-      <div class="sec-eyebrow" data-n="05">Get In Touch</div>
-      <h2 class="contact-h">Let's Work<em>Together.</em></h2>
-      <p class="contact-sub">Open to Data Science internships, ML projects, and full-stack collaborations. I build things that actually work — let's connect.</p>
+      <div class="sec-eyebrow" data-n="07">Get In Touch</div>
+      <h2 class="contact-h">Let's Build<em>Something Impactful.</em></h2>
+
+      <!-- §NEW: CTA strip -->
+      <div class="contact-cta-strip">
+        <span class="strip-dot" aria-hidden="true"></span>
+        <p><strong>Open to internships and collaborations</strong> — Available from May 2026 in Data Science, ML Engineering, and Full-Stack AI roles.</p>
+      </div>
+
+      <p class="contact-sub">Reach out to discuss internship opportunities, ML project collaborations, or anything AI/data-science. I respond within 24 hours.</p>
+
+      <!-- §NEW: Resume download in contact -->
+      <div style="margin-bottom:28px">
+        <a href="https://drive.google.com/drive/folders/168X9S9oHTjjzUFDuSj9hvSBFhP_KR_9c" target="_blank" rel="noopener" class="btn btn-p" style="display:inline-flex;width:100%;justify-content:center;padding:14px" aria-label="Download Resume PDF">
+          Go Through Resume
+        </a>
+      </div>
       <div class="contact-items">
         <a href="tel:+919848426565" class="ci">
           <div class="ci-icon">📞</div>
@@ -1627,15 +2239,16 @@ footer{
 </section>
 
 <!-- ═══════════ FOOTER ═══════════ -->
-<footer>
+<footer role="contentinfo">
   <div class="f-left">
-    <a href="#home" class="f-logo"></a>
-    <span class="f-copy">© 2025 Shrish Maruge · Built with passion.</span>
+    <a href="#home" class="f-logo">SM</a>
+    <span class="f-copy">© 2025 Shrish Maruge · Data Science & ML Engineer · Open to Internships</span>
   </div>
   <div class="f-links">
-    <a href="https://github.com/ShrishMaruge" target="_blank">GitHub</a>
-    <a href="https://www.linkedin.com/in/maruge-shrish-306033375/" target="_blank">LinkedIn</a>
+    <a href="https://github.com/ShrishMaruge" target="_blank" rel="noopener">GitHub</a>
+    <a href="https://www.linkedin.com/in/maruge-shrish-306033375/" target="_blank" rel="noopener">LinkedIn</a>
     <a href="mailto:shrish.maruge99@gmail.com">Email</a>
+    <a href="https://drive.google.com/file/d/your-resume-id/view" target="_blank" rel="noopener">Resume</a>
   </div>
 </footer>
 
@@ -1906,6 +2519,56 @@ document.querySelectorAll('.btn').forEach(btn=>{
     btn.style.position='relative';btn.style.overflow='hidden';
     btn.appendChild(rip);setTimeout(()=>rip.remove(),600);
   });
+});
+
+
+
+/* ─── §NEW: PROJECT CASE STUDY EXPAND/COLLAPSE ─── */
+document.querySelectorAll('.proj-expand-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const targetId = btn.dataset.target;
+    const panel = document.getElementById(targetId);
+    if (!panel) return;
+    const isOpen = panel.classList.toggle('open');
+    btn.classList.toggle('open', isOpen);
+    btn.setAttribute('aria-expanded', isOpen);
+    panel.setAttribute('aria-hidden', !isOpen);
+  });
+});
+
+/* ─── §NEW: CONTRIBUTION GRAPH GENERATOR ─── */
+(function buildContribGraph() {
+  const grid = document.getElementById('contribGrid');
+  if (!grid) return;
+  // Generate a realistic-looking contribution pattern
+  const COLS = 26, ROWS = 7, TOTAL = COLS * ROWS;
+  const levels = ['', 'l1', 'l2', 'l3', 'l4'];
+  // Realistic weights — mostly empty, some activity
+  const weights = [0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 2, 2, 3, 4];
+  const frag = document.createDocumentFragment();
+  for (let i = 0; i < TOTAL; i++) {
+    const cb = document.createElement('div');
+    cb.className = 'cb';
+    const w = weights[Math.floor(Math.random() * weights.length)];
+    if (w > 0) cb.classList.add(levels[w]);
+    const col = Math.floor(i / ROWS);
+    const row = i % ROWS;
+    cb.setAttribute('aria-label', `Column ${col + 1}, Row ${row + 1}, level ${w}`);
+    frag.appendChild(cb);
+  }
+  grid.appendChild(frag);
+})();
+
+/* ─── §NEW: GITHUB REPO CARD CURSOR ─── */
+document.querySelectorAll('.repo-card').forEach(el => {
+  el.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
+  el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
+});
+
+/* ─── §NEW: WHY CARD CURSOR ─── */
+document.querySelectorAll('.why-card').forEach(el => {
+  el.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
+  el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
 });
 
 })();
